@@ -1,6 +1,4 @@
 export const environment = {
-    production: false,
-    apiUrl: 'http://localhost:4000'
+    production: true,
+    apiUrl: 'https://your-backend-api.railway.app'  // ← Replace with your real production backend URL
 };
-
-export {};

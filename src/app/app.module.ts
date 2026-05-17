@@ -4,12 +4,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { fakeBackendProvider } from './_helpers/fake-backend';
-import { AppRoutingModule } from './app-routing.module';         // ← direct file
+import { AppRoutingModule } from './app-routing.module';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { appInitializer } from './_helpers/app.initializer';
 import { AccountService } from './_services/account.service';
-import { AppComponent } from './app.component';                  // ← direct file
+import { AppComponent } from './app.component';
 import { AlertComponent } from './_components/alert.component';
 import { HomeComponent } from './home/home.component';
 
@@ -29,7 +29,12 @@ import { HomeComponent } from './home/home.component';
     { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    fakeBackendProvider
+
+    // ╔══════════════════════════════════════════════════════════════╗
+    // ║  STAGE A: Uncomment the line below to enable fake backend  ║
+    // ║  STAGE B: Comment it out to use the real backend API       ║
+    // ╚══════════════════════════════════════════════════════════════╝
+    // fakeBackendProvider
   ],
   bootstrap: [AppComponent]
 })

@@ -1,59 +1,53 @@
-# Act7
+# IntProg Act7 — Angular Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.8.
+Full-stack authentication system frontend built with **Angular 21** and **TypeScript**.
 
-## Development server
+## Live Deployment
 
-To start a local development server, run:
+- **Live App**: `https://YOUR_VERCEL_URL.vercel.app`
+- **Backend API**: `https://YOUR_RENDER_URL.onrender.com`
+- **Swagger Docs**: `https://YOUR_RENDER_URL.onrender.com/api-docs`
 
-```bash
-ng serve
-```
+## Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- User registration with email verification
+- Login with JWT authentication
+- Role-based access (Admin panel vs User dashboard)
+- Profile management (view & update)
+- Password reset flow
+- Auto-refresh of JWT tokens
+- Responsive UI
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Local Setup
 
 ```bash
-ng generate --help
+# 1. Install dependencies
+npm install
+
+# 2. Start development server
+npm start
 ```
 
-## Building
+The app runs on `http://localhost:4200` and expects the backend API on `http://localhost:4000`.
 
-To build the project run:
+## Fake Backend Toggle
+
+For **Stage A** demonstration (no external dependencies):
+
+1. Open `src/app/app.module.ts`
+2. **Uncomment** the `fakeBackendProvider` line in the providers array
+3. The app will use an in-memory mock backend (localStorage)
+
+For **Stage B** (real backend integration):
+
+1. **Comment out** the `fakeBackendProvider` line
+2. Ensure `src/environments/environment.prod.ts` has the correct backend URL
+3. Build with `ng build --configuration production`
+
+## Production Build
 
 ```bash
-ng build
+ng build --configuration production
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Output: `dist/angular-21-boilerplate/browser/`
