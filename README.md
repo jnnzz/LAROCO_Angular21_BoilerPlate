@@ -4,9 +4,9 @@ Full-stack authentication system frontend built with **Angular 21** and **TypeSc
 
 ## Live Deployment
 
-- **Live App**: `https://YOUR_VERCEL_URL.vercel.app`
-- **Backend API**: `https://YOUR_RENDER_URL.onrender.com`
-- **Swagger Docs**: `https://YOUR_RENDER_URL.onrender.com/api-docs`
+- **Live App**: `https://laroco-angular21-fullstack.vercel.app`
+- **Backend API**: `https://lab6-intprog.onrender.com`
+- **Swagger Docs**: `https://lab6-intprog.onrender.com/api-docs`
 
 ## Features
 
