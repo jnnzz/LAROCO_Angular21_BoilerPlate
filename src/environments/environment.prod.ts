@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://your-backend-api.railway.app'  // ← Replace with your real production backend URL
+    apiUrl: 'https://lab6-intprog.onrender.com'
 };
