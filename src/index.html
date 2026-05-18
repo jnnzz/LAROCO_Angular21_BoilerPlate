@@ -46,12 +46,21 @@
     }
 
     @keyframes spin {
-      to { transform: rotate(360deg); }
+      to {
+        transform: rotate(360deg);
+      }
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 0.5; }
-      50%       { opacity: 1; }
+
+      0%,
+      100% {
+        opacity: 0.5;
+      }
+
+      50% {
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -59,11 +68,10 @@
 <body>
   <app-root>
     <div class="app-loading">
-      <div class="logo-text">Auth System</div>
       <div class="spinner"></div>
       <div class="status-text">Connecting to server&hellip;</div>
     </div>
   </app-root>
 </body>
 
-</html>
+</html>
